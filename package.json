@@ -1,0 +1,15 @@
+{
+  "name": "kotobacho-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local-first Japanese grammar corpus",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mdict-js": "10.0.1"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "0.9.12"
+  }
+}

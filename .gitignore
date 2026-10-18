@@ -1,0 +1,12 @@
+﻿node_modules/
+.env
+.env.*
+!.env.example
+dist/
+
+ai-config.js
+api-config.js
+
+# Keep dictionary files local; do not publish them
+词典/*
+!词典/.gitkeep

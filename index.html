@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>ことば帳 · 日语语法语料库</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="ことば帳首页">
+        <span class="brand-mark">言</span>
+        <span><strong>ことば帳</strong><small>我的日语语料库</small></span>
+      </a>
+      <div class="sidebar-label">工作区</div>
+      <nav class="main-nav" aria-label="主导航">
+        <button class="nav-item active" data-page="dashboard"><span class="nav-icon">⌂</span>总览</button>
+        <button class="nav-item" data-page="sentences"><span class="nav-icon">▤</span>句子语料</button>
+        <button class="nav-item" data-page="grammars"><span class="nav-icon">文</span>语法知识库</button>
+        <button class="nav-item" data-page="dictionary"><span class="nav-icon">辞</span>词典与词库</button>
+        <button class="nav-item" data-page="sources"><span class="nav-icon">源</span>外部资料</button>
+        <button class="nav-item" data-page="review"><span class="nav-icon">復</span>练习与复习</button>
+        <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span>设置与备份</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="local-badge"><span></span>数据仅保存在此设备</div>
+        <div class="sidebar-note">让遇见的每一句日语，<br>都成为自己的知识。</div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb"><span>我的语料库</span><b>/</b><strong id="page-name">总览</strong></div>
+        <div class="top-actions">
+          <button class="button button-quiet" id="quick-add-sentence">＋ 添加句子</button>
+          <span class="avatar">日</span>
+        </div>
+      </header>
+      <section id="page-root" class="page-root" aria-live="polite"></section>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+  <input id="import-file" type="file" accept=".json,.csv,application/json,text/csv" hidden>
+  <input id="dictionary-file" type="file" accept=".json,.csv,.tsv,.txt,.xml,application/json,text/csv,text/tab-separated-values,application/xml,text/xml" hidden>
+  <input id="grammar-source-file" type="file" accept=".json,.csv,.tsv,application/json,text/csv,text/tab-separated-values" hidden>
+  <script src="api-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
